@@ -1,6 +1,6 @@
 # API Blueprint For Fun and Profit (APIB-FFP)
-
-What we want to achieve in this workshop:]
+i
+What we want to achieve in this workshop:
 
 1. Get a feeling for the API Blueprint tools that are available
 2. Provide an automated workflow for validating software components based on an
