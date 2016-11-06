@@ -1,14 +1,12 @@
 # API Blueprint For Fun and Profit (APIB-FFP)
 
 What we want to achieve in this workshop:
-
 1. Get a feeling for the API Blueprint tools that are available
-2. Provide a CI based workflow for validating software components based on an
+2. Provide an automated workflow for validating software components based on an
    Apib spec.
    Speciffically:
-    * Debug HTTP requests
-    * Validate Server implementations
-    * Validate Client implementations
+    * We will create a Javascript service and test it with dredd
+    * We will write a Java client and test it against drakov
 
 
 This is a polyglot workshop, so there should be something for everybody. We

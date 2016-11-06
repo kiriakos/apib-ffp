@@ -1,0 +1,13 @@
+[Unit]
+Description=Luminos container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a luminos
+ExecStop=/usr/bin/docker stop lumios
+
+[Install]
+WantedBy=default.target
+

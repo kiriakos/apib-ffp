@@ -1,13 +1,12 @@
-" ============================================================================
-" Netrw Directory Listing                                        (netrw v156)
-"   /home/kiriakos/Devel/api-blueprint/APIB-For-Fun-And-Profit/provision
-"   Sorted by      name
-"   Sort sequence: [\/]$,\<core\%(\.\d\+\)\=\>,\.h$,\.c$,\.cpp$,\~\=\*$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$
-"   Quick Help: <F1>:help  -:go up dir  D:delete  R:rename  s:sort-by  x:special
-" ==============================================================================
-../
-./
-install-docker.sh
-install-drafter.sh
-install-readme.sh
-install-vim.sh
+
+##  Install readme service
+cd /vagrant/infra/aglio/
+docker build -t apibffp/aglio .
+
+docker run -d --name aglio -p 10080:3000 -v /vagrant/ffp.apib:/ffp.apib \
+    apibffp/aglio -i /ffp.apib -s
+
+sudo cp /vagrant/infra/aglio/aglio.service /etc/systemd/system/
+sudo systemctl enable aglio.service
+sudo systemctl start aglio.service
+
