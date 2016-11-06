@@ -1,2 +1,3 @@
 #Ignore vagrant system files
 .vagrant
+ubuntu*console.log
