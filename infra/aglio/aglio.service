@@ -11,7 +11,7 @@ ExecStop=/usr/bin/docker stop aglio
 RestartSec=10                       # Restart service after 10 seconds if node service crashes
 StandardOutput=syslog               # Output to syslog
 StandardError=syslog                # Output to syslog
-SyslogIdentifier=nodesrv
+SyslogIdentifier=aglio
 
 [Install]
 WantedBy=default.target

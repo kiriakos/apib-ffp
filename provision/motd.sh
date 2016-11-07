@@ -21,7 +21,7 @@ petcli=$( for i in $ip; do echo -e "\thttp://${i}:20080/"; done )
 
 
 cat <<EOF
-    API Blueprint: FoFun and Profit
+    API Blueprint: For Fun and Profit
 
     Readme is at:
 ${readme}
