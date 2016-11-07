@@ -24,15 +24,13 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
 
-    # Install aglio
-
-    # Install Dredd
-
-    # Install Dracov
-    # Print Banner
+    # Install Banner
     chmod -x /etc/update-motd.d/*
     cp /vagrant/provision/motd.sh /etc/update-motd.d/10-apib-ffp
     chmod +x /etc/update-motd.d/10-apib-ffp
+
+    # Print Banner
+    /etc/update-motd.d/10-apib-ffp
 
   SHELL
 end

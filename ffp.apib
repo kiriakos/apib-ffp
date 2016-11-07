@@ -3,33 +3,14 @@ HOST: http://localhost:20080
 
 # API-Blueprint for fun & profit
 
-## Data Structures
-
-### Customer (object)
-A customer
-
-#### Properties 
-- id:   1   (number)
-- `first_name` John
-- `last_name` Smith
-- pets (array[Pet])
-
-### Pet (object)
-- `id`      42 (number)
-- `name`    Dobby
-- `gender`  Male
-- `species` (Species)
-
-### Species (object)
-- `name` Hound (string)
-
 ## Pets [/pets]
 
 ### GET
 
 + Response 200
+
         [{
-            id: "4",
+            id: "7",
             name: "Dobby",
             gender: "Male",
             species: "Hound"
@@ -39,26 +20,15 @@ A customer
 ### POST
 
 + Request
-    + Attributes (Pet)
+
+        {
+            name: "Dobby",
+            gender: "Male",
+            species: "Hound"
+        }
 
 + Response 200
     + Attributes
         + id: 7
 
 
-
-## Species [/species]
-
-### GET
-
-+ Response 200
-    + Attributes (array[Species])
-
-
-### POST
-
-+ Request
-    + Attributes (Species)
-     
-+ Response 200
-    + Attributes (array[Species])
