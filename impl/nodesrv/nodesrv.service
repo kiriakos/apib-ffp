@@ -1,17 +1,19 @@
+
 [Unit]
-Description=Luminos container
+Description=Node WebAPI container
 Requires=docker.service
 After=docker.service
 
 [Service]
 Restart=always
-ExecStart=/usr/bin/docker start -a luminos
-ExecStop=/usr/bin/docker stop lumios
+ExecStart=/usr/bin/docker start -a nodesrv
+ExecStop=/usr/bin/docker stop nodesrv
 
 RestartSec=10                       # Restart service after 10 seconds if node service crashes
 StandardOutput=syslog               # Output to syslog
 StandardError=syslog                # Output to syslog
 SyslogIdentifier=nodesrv
+
 
 [Install]
 WantedBy=default.target

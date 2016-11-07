@@ -6,4 +6,12 @@
 
 # Node & Npm
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-apt-get install nodejs
+
+
+# Install pakages
+#
+#   Node
+#   Inotify
+#
+apt-get install nodejs inotify-tools
+

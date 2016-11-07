@@ -1,0 +1,5 @@
+FROM node:0.12.7
+
+EXPOSE 20080
+ENTRYPOINT ["node"]
+

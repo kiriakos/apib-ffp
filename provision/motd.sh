@@ -32,12 +32,13 @@ ${aglio}
     Drakov (APIB Mock server) at:
 ${drakov}
 
-    Petstore Springboot client at:
-        /vagrant/client/java/
-
     Petstore JS web service at:
 ${petserv}
         /vagrant/server/js/
+
+    Petstore Springboot client at:
+        /vagrant/impl/javacli/
+
 
     Base box up! To run the workshop code do:
     1. 'vagrant ssh' to ssh into the box

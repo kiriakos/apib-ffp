@@ -28,5 +28,5 @@ cd .vim/bundle && \
 git clone --depth=1 https://github.com/scrooloose/syntastic.git
 
 # Install APIB mode
-git clone https://github.com/kylef/apiblueprint.vim.git .vim/bundle/apiblueprint.vim
+git clone https://github.com/kylef/apiblueprint.vim.git
 
