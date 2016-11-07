@@ -12,3 +12,8 @@ cd drafter
 make drafter
 make install
 
+
+#
+#   Also install dredd
+#
+npm install -g dredd

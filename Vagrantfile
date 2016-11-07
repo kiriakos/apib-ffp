@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
   end
 
   ## Install APIB Tools
+  config.vm.provision "shell", path: "provision/install-systemm.sh"
   config.vm.provision "shell", path: "provision/install-drafter.sh"
   config.vm.provision "shell", path: "provision/install-vim.sh"
   config.vm.provision "shell", path: "provision/install-docker.sh"

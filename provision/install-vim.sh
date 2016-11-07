@@ -10,9 +10,18 @@
 cd /home/ubuntu
 mkdir -p .vim/autoload .vim/bundle
 curl -LSso .vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-echo "execute pathogen#infect()" >> /home/ubuntu/.vimrc
-echo "syntax on" >> /home/ubuntu/.vimrc
-echo "filetype plugin indent on" >> /home/ubuntu/.vimrc
+
+cat > .vimrc <<EOF
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+EOF
 
 # Install synthtastic
 cd .vim/bundle && \
