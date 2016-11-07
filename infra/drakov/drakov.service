@@ -1,0 +1,18 @@
+[Unit]
+Description=drakov container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a drakov
+ExecStop=/usr/bin/docker stop drakov
+
+RestartSec=2                        # Restart service after 10 seconds if node service crashes
+StandardOutput=syslog               # Output to syslog
+StandardError=syslog                # Output to syslog
+SyslogIdentifier=drakov
+
+[Install]
+WantedBy=default.target
+
